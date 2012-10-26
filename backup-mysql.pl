@@ -17,10 +17,11 @@ my @db = qw(
             another_db_name_here
 	    );
 
-# Tables you want to ignore.  
+# Tables you want to ignore (optional)
 my @ignores = qw("");
-my $prefix=" ";
-my %opts = ('' => $prefix.join($prefix, @ignores));
+#my $prefix=" --ignore-table=db_name_here.";
+my $prefix = " ";
+my %opts = ('db_name_here' => $prefix.join($prefix, @ignores));
 
 # Pass these in on the command line in the order they appear in this list assignment.
 my ($HOSTNAME, $USERNAME, $PASSWORD) = @ARGV;
